@@ -24,7 +24,7 @@ def parse_html(html):
             - images_missing_alt (int)
             - word_count (int)
     """
-    soup = BeautifulSoup(html, "lxml")
+    soup = BeautifulSoup(html, "html.parser")
 
     # Page title - check og:title first, then fallback to <title>
     title = None
@@ -87,7 +87,7 @@ def _count_visible_words(html):
     Strips script, style, noscript, and SVG elements before counting.
     Collapses whitespace and splits on word boundaries.
     """
-    soup = BeautifulSoup(html, "lxml")
+    soup = BeautifulSoup(html, "html.parser")
 
     # Remove elements that don't contribute visible text
     for tag in soup.find_all(["script", "style", "noscript", "svg", "head"]):
