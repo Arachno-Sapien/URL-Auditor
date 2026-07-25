@@ -2,11 +2,11 @@
 
 A web tool that takes any URL and returns a structured audit report — HTTP status, response time, page title, meta description, SEO metrics, and accessibility checks.
 
-**Live Demo**: [https://url-auditor-kli9.onrender.com](https://url-auditor-kli9.onrender.com)
+**GitHub Repository**: [https://github.com/Arachno-Sapien/URL-Auditor]
 
-**Loom Walkthrough**: *(add your Loom link here)*
+**Live Demo**: [https://url-auditor-kli9.onrender.com]
 
-**GitHub Repository**: [https://github.com/Arachno-Sapien/URL-Auditor](https://github.com/Arachno-Sapien/URL-Auditor)
+**Loom Walkthrough**: [https://www.loom.com/share/54c8436333d142a2ab5a9983d7f054be]
 
 ---
 
@@ -192,5 +192,5 @@ url-auditor/
 ---
 
 ## Credits
-By: Syed Junaid Khalander [Arachno Sapien]
+
 Built for [Digital Heroes Training Task](https://digitalheroesco.com)
