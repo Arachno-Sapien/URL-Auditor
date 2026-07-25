@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL Auditor — Instant Page Audit Reports</title>
+  <meta name="description" content="Paste any URL and get an instant structured audit report: HTTP status, page title, SEO metrics, accessibility checks, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <span class="header__icon" aria-hidden="true">🔍</span>
+        <h1 class="header__title">URL Auditor</h1>
+        <p class="header__subtitle">Paste a URL to get an instant page audit report</p>
+      </header>
+
+      <!-- Form -->
+      <form id="audit-form" class="audit-form" autocomplete="off">
+        <div class="input-group">
+          <input
+            type="text"
+            id="url-input"
+            class="input-group__input"
+            placeholder="https://example.com"
+            aria-label="URL to audit"
+            required
+          >
+          <button type="submit" id="submit-btn" class="input-group__btn">
+            <span class="spinner" id="spinner"></span>
+            <span id="btn-text">Audit</span>
+          </button>
+        </div>
+      </form>
+
+      <!-- Error Banner -->
+      <div id="error-banner" class="error-banner" role="alert">
+        <span class="error-banner__icon" aria-hidden="true">⚠️</span>
+        <p id="error-text" class="error-banner__text"></p>
+      </div>
+
+      <!-- Results -->
+      <div id="results" class="results">
+        <!-- Actions Bar -->
+        <div class="results__actions">
+          <button id="btn-export-csv" class="action-btn">
+            <span aria-hidden="true">📥</span> Download CSV
+          </button>
+          <button id="btn-export-pdf" class="action-btn">
+            <span aria-hidden="true">🖨️</span> Save as PDF
+          </button>
+        </div>
+
+        <div class="results__card">
+          <div class="results__header">
+            <span id="result-url" class="results__url"></span>
+            <span id="result-status-badge" class="results__status"></span>
+          </div>
+          <div class="results__grid">
+            <div class="results__item">
+              <div class="results__label">HTTP Status</div>
+              <div id="result-status" class="results__value"></div>
+            </div>
+            <div class="results__item">
+              <div class="results__label">Response Time</div>
+              <div id="result-time" class="results__value"></div>
+            </div>
+            <div class="results__item results__item--full">
+              <div class="results__label">Page Title</div>
+              <div id="result-title" class="results__value results__value--small"></div>
+            </div>
+            <div class="results__item results__item--full">
+              <div class="results__label">Meta Description</div>
+              <div id="result-meta" class="results__value results__value--small"></div>
+            </div>
+            <div class="results__item">
+              <div class="results__label">H1 Tags</div>
+              <div id="result-h1" class="results__value"></div>
+            </div>
+            <div class="results__item">
+              <div class="results__label">Word Count</div>
+              <div id="result-words" class="results__value"></div>
+            </div>
+            <div class="results__item">
+              <div class="results__label">Total Images</div>
+              <div id="result-images" class="results__value"></div>
+            </div>
+            <div class="results__item">
+              <div class="results__label">Missing Alt Text</div>
+              <div id="result-alt" class="results__value"></div>
+            </div>
+          </div>
+          
+          <!-- Social Preview -->
+          <div class="social-preview-container" id="social-preview-section">
+            <div class="results__label social-preview-label">Social Media Preview</div>
+            <div class="social-card">
+              <div class="social-card__image-container" id="social-image-container">
+                <img id="social-image" class="social-card__image" src="" alt="Social Preview Image">
+              </div>
+              <div class="social-card__content">
+                <div id="social-domain" class="social-card__domain"></div>
+                <div id="social-title" class="social-card__title"></div>
+                <div id="social-desc" class="social-card__desc"></div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p class="footer__credit">
+      Built for
+      <a href="https://digitalheroesco.com" target="_blank" rel="noopener noreferrer">
+        Digital Heroes Training Task
+      </a>
+    </p>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

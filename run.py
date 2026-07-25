@@ -1,0 +1,17 @@
+"""
+Entry point for the URL Auditor application.
+
+Usage:
+    python run.py          # Starts Flask dev server on port 3000
+    gunicorn run:app       # Production server (used by Render)
+"""
+
+import os
+from app import create_app
+
+app = create_app()
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 3000))
+    debug = os.environ.get("FLASK_DEBUG", "true").lower() == "true"
+    app.run(host="0.0.0.0", port=port, debug=debug)

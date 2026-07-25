@@ -1,0 +1,6 @@
+flask==3.1.*
+requests==2.32.*
+beautifulsoup4==4.13.*
+lxml==5.3.*
+gunicorn==23.0.*
+pytest==8.3.*
