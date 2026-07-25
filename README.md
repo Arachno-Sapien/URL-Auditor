@@ -2,7 +2,7 @@
 
 A web tool that takes any URL and returns a structured audit report — HTTP status, response time, page title, meta description, SEO metrics, and accessibility checks.
 
-**Live Demo**: *(add your deployed URL here)*
+**Live Demo**: [https://url-auditor-kli9.onrender.com](https://url-auditor-kli9.onrender.com)
 
 **Loom Walkthrough**: *(add your Loom link here)*
 
@@ -192,5 +192,5 @@ url-auditor/
 ---
 
 ## Credits
-
+By: Syed Junaid Khalander [Arachno Sapien]
 Built for [Digital Heroes Training Task](https://digitalheroesco.com)
